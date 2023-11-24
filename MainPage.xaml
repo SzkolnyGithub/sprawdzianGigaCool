@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sprawdzian24._11Badowski4c.MainPage">
+    <Shell.TitleView>
+        <Label 
+            Text="Schronisko dla zwierząt"
+            FontSize="20"
+            Padding="15"
+            TextColor="White"
+            FontAttributes="Bold"
+            />
+    </Shell.TitleView>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0">
+
+            <Label 
+                Text="Wybierz gatunek Kot/Pies"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            
+            <Switch 
+                x:Name="gatunek"
+                IsToggled="false"
+                HorizontalOptions="Center"/>
+            
+            <Label 
+                Text="Podaj imię"
+                HorizontalOptions="Center"/>
+            
+            <Entry 
+                Placeholder="Wprowadź imię zwierzęcia"
+                HorizontalOptions="Center"
+                x:Name="imie"
+                Text=""
+                WidthRequest="350"/>
+            
+            <Button 
+                Text="Dodaj zwierzę"
+                Clicked="dodaj"
+                HorizontalOptions="Center"/>
+
+            <Label x:Name="gat"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"/>
+            <Label x:Name="imieZw"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"/>
+            <HorizontalStackLayout>
+                <Button 
+                IsEnabled="false"
+                Text="Poprzedni"
+                FontSize="25"
+                WidthRequest="150"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                Clicked="pop"
+                x:Name="poprz"/>
+
+                <Label 
+                    WidthRequest="50"/>
+
+                <Button 
+                IsEnabled="false"
+                Text="Następny"
+                FontSize="25"
+                WidthRequest="150"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Clicked="nast"
+                x:Name="nastep"/>
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
